@@ -1,0 +1,18 @@
+---
+layout: page
+title: 分类
+header: Posts By Category
+group: navigation
+---
+{% include JB/setup %}
+<div>
+	{% for category in site.categories %}
+	<h3 class="line-box">{{ category[0] }}({{ category[1].size }}篇)</h3>
+	<ul class="posts-list">
+		{% assign pages_list = category[1] %}
+		{% include JB/pages_list %}
+	</ul>
+
+	{% endfor %}
+	</div>
+

@@ -1,0 +1,49 @@
+<h3 class="line-box">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h3>
+
+<div class="row-fluid">
+  <div>
+    <ul class="list-inline">
+      <li><i class="glyphicon glyphicon-user"></i></li>
+      <li>{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</li>
+      <li><i class="glyphicon glyphicon-time"></i></li>
+      <li>{{ page.date | date: " %Y 年 %m 月 %d 日" }}</li>
+      <li><i class="glyphicon glyphicon-folder-close"></i></li>
+      {% assign categories_list = page.categories %}
+      {% include JB/categories_list %}
+    </ul>
+	<hr>
+    <div class="content">
+      {{ content }}
+    </div>
+
+    <hr>
+    <!-- jiathis分享-->
+    {% include custom/jiathis %}
+
+    <br><br>
+    {% unless page.tags == empty %}
+      <ul class="list-inline">
+        <li><i class="glyphicon glyphicon-tags"></i></li>
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+      </ul>
+    {% endunless %}
+  
+    <hr>
+    <ul class="pagination">
+    {% if page.previous %}
+      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇</a></li>
+    {% else %}
+      <li class="prev disabled"><a>&larr; 没有了</a></li>
+    {% endif %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">{{ page.title }}</a></li>
+    {% if page.next %}
+      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &raquo;</a></li>
+    {% else %}
+      <li class="next disabled"><a>没有了 &rarr;</a>
+    {% endif %}
+    </ul>
+    <hr>
+    {% include JB/comments %}
+  </div>
+</div>
