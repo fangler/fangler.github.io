@@ -9,15 +9,15 @@ tags: [git]
 
 这两天都在搭建自己工作中用到的开发环境，服务器已经确定使用Centos，团队打算使用git作为版本控制工具，正好我对git还算比较熟悉，于是让我来为Centos服务器搭建git环境。
 
-Git服务器端的部署(Centos 7.0 -64位机器一台, Centos_IP : 192.168.1.111)：
+Git服务器端的部署(Centos 7.0 -64位机器一台, Centos_IP : 192.168.1.111)
 
-####1. Git的安装：####
+####1. Git的安装####
 
-(Linux)可以在命令行输入`git`看看有没有安装，如果用Debian或Ubuntu linux，通过`sudo apt-get install git`来安装。(如是老一点的Debian或Ubuntu，命令改成`sudo apt-get install git-core`)
+Linux：可以在命令行输入`git`看看有没有安装，如果用Debian或Ubuntu linux，通过`sudo apt-get install git`来安装(如是老一点的Debian或Ubuntu，命令改成`sudo apt-get install git-core`)。
 
-(Windows) msysgit是Windows版的Git，从[msysgit官网](http://msysgit.github.io/){:target="_blank"}下载，然后按默认选项安装即可。
+Windows：msysgit是Windows版的Git，从[msysgit官网](http://msysgit.github.io/){:target="_blank"}下载，然后按默认选项安装即可。
 
-####2. 安装openssh server，本机已装，跳过。####
+####2. 安装openssh server，本机已装，跳过####
 
 主要是ssh的配置，ssh开启公钥认证登录，编辑 etc/ssh/sshd_config(约在47到51行)，去掉以下几行的注释:
 {% highlight sh %}
@@ -44,7 +44,7 @@ AuthorizedKeysCommandRunAs nobody
   先在git服务器创建git用户 : `sudo adduser git`，设置密码 ：`sudo passwd git`， 密码设定为"git"(也可以自行设置为其他).
   切换到用户git，`su git` 。
 
-  将上一步生成的两个文件(文件名为"id_rsa"和"id_rsa.pub")中的"id_rsa.pub"中的内容复制到~/.ssh/authorized_keys(如没有，可以使用`touch ~/.ssh/authorized_keys`创建)文件
+  将上一步生成的两个文件(文件名为"id_rsa"和"id_rsa.pub")中的"id_rsa.pub"中的内容复制到~/.ssh/authorized_keys(如没有，可以使用`touch ~/.ssh/authorized_keys`创建)文件。
 
 - 权限设置
 
@@ -63,8 +63,7 @@ AuthorizedKeysCommandRunAs nobody
 
 *至此，git服务器基本上部署成功了，我们可以测试一下*
 
-例:在git 服务器上， 在/home/git目录下`git init --bare test.git` , 这样就创建了一个空仓库
-
+例:在git 服务器上， 在/home/git目录下`git init --bare test.git` , 这样就创建了一个空仓库；
 在客户端机器上，可以使用`git clone git@192.168.1.111:test.git` 来克隆这个仓库。
 
 如果想把git服务器上的仓库分享给其他人来协作开发，只需要把其他人的公钥保存到authorized_keys中。
@@ -84,7 +83,7 @@ $ sudo python setup.py install
 {% endhighlight %}
 
 - 初始化Gitosis
-这个时候需要用一个公钥来初始化，我使用windows上生成的公钥，这个公钥就是生成的gitosis-admin.git的仓库的管理员
+这个时候需要用一个公钥来初始化，我使用windows上生成的公钥，这个公钥就是生成的gitosis-admin.git的仓库的管理员：
 {% highlight sh %}
 [git@localhost ~]$ sudo -H -u git gitosis-init < /home/git/.ssh/authorized_keys
 Initialized empty Git repository in /home/git/repositories/gitosis-admin.git/
@@ -98,10 +97,9 @@ Reinitialized existing Git repository in /home/git/repositories/gitosis-admin.gi
  在windows机器上，在git bash窗口中, 输入`ssh git@192.168.1.111`, 出现如下的
 "ERROR:gitosis.serve.main:Need SSH_ORIGINAL_COMMAND in environment. 
 Connection to gitserver closed."
-说明 Gitosis 认出了该用户的身份，但由于没有运行任何 Git 命令，所以它切断了连接。
+说明 Gitosis 认出了该用户的身份，但由于没有运行任何 Git 命令，所以它切断了连接
 
-- 经过上一步的输出提示后，表示gitosis已经配置成功了。我们可以将gitosis-admin仓库clone到本地进行修改了。
-  `git clone git@192.168.1.111:gitosis-admin.git`
+- 经过上一步的输出提示后，表示gitosis已经配置成功了。我们可以将gitosis-admin仓库clone到本地(`git clone git@192.168.1.111:gitosis-admin.git`)进行修改了。
  这样就可以看到gitosis-admin.git的目录的，至于目录里面有什么，或者要怎么配置gitosis-admin就可以去看[官方文档](https://github.com/res0nat0r/gitosis000){:target="_blank"}
 
 简单的git服务器终于搭建成功了，我们才4人开发的小队伍应该是完全没有问题了。收工，该去复习下git的命令了。= =
