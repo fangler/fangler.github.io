@@ -3,7 +3,7 @@ layout: post
 author: fangler
 title: "更换博客主题为Freelancer"
 description: "更换博客主题"
-category: "Interest"
+category: "interest"
 tags: [Freelancer]
 ---
 {% include JB/setup %}
