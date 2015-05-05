@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "提交代码到git服务器"
-description: "git提交"
+title: 提交代码到git服务器
+description: 使用git命令提交本地代码到git服务器上
+keywords: git, git服务器
 category: working
 tags: [git]
 ---

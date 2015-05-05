@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "在VMware上安装Centos"
-description: "虚拟机安装Centos"
-category: "working"
+title: 在VMware上安装Centos
+description: VMware虚拟机安装Centos Everything版本，并安装VMware tools
+keywords: VMware,Centos Everything,VMware tools
+category: working
 tags: [Centos]
 ---
 {% include JB/setup %}

@@ -1,9 +1,10 @@
 ---
 layout: post
 author: fangler
-title: "更换博客主题为Freelancer"
-description: "更换博客主题"
-category: "interest"
+title: 更换博客主题为Freelancer
+description: 博客最开始使用的是jekyll-bootstrap默认的主题，更换为startbootstrap-freelancer博客主题
+keywords: jekyll-bootstrap,startbootstrap-freelancer,更换博客主题
+category: interest
 tags: [Freelancer]
 ---
 {% include JB/setup %}

@@ -1,10 +1,11 @@
 ---
 layout: post
 author: fangler
-title: "在家休息的日子"
-description: "感悟"
-category: "thinking"
-tags: ["感悟"]
+title: 在家休息的日子
+description: 感悟
+keywords: 感悟
+category: thinking
+tags: [感悟]
 ---
 {% include JB/setup %}
 

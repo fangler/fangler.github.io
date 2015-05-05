@@ -1,9 +1,10 @@
 ---
 layout: post
 author: fangler
-title: "博客的诞生"
-description: "使用jekyll + bootstrap 搭建博客"
-category: "interest"
+title: 博客的诞生
+description: ubuntu下使用jekyll + bootstrap 搭建博客，搭建jekyllbootstrap主题
+keywords: jekyll, bootstrap, jekyllbootstrap
+category: interest
 tags: [搭建博客]
 ---
 {% include JB/setup %}

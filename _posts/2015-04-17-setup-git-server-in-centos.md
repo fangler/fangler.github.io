@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Centos搭建git服务器"
-description: "git服务器"
+title: Centos搭建git服务器
+description: Centos 7做后端服务器，并在其上部署git服务器
+keywords: Centos, git, git服务器
 category: working
 tags: [git]
 ---

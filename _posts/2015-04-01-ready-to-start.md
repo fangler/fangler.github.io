@@ -1,10 +1,10 @@
 ---
 layout: post
 author: fangler
-title: "创业准备中"
-description: "创业"
-category: "thinking"
-tags: ["创业"]
+title: 创业准备中
+description: 创业
+category: thinking
+tags: [创业]
 ---
 {% include JB/setup %}
 

@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "提交Jekyll博客代码到github"
-description: jekyll, github博客,git
-category: "interest"
+title: 提交Jekyll博客代码到github
+description: 使用git来提交Jekyll的博客代码到github上部署博客
+keywords: git, jekyll, github
+category: interest
 tags: [github]
 ---
 {% include JB/setup %}

@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "android生成keystore和apk签名"
-description: "keystore,apk签名" 
-category: "android"
-tags: ["android keystore"]
+title: android生成keystore和apk签名
+description: android生成keystore签名文件，并为apk进行签名
+keywords: android,keystore,apk签名
+category: android
+tags: [android keystore]
 ---
 {% include JB/setup %}
 
