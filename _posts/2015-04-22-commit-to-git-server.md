@@ -17,11 +17,13 @@ git服务器部署好了后，我们就可以创建远程仓库了。其他人�
 **1. 代码还没有创建成仓库**
 
 这种情况下，需要先创建成仓库。下图将呈现具体步骤
+
 ![图片加载中...](/images/commit_to_git_server1.png)
 
 创建完成后，我们使用`git remote -v`查看远程仓库， 可以看到输出为空，表示没有关联任何远程仓库。
 
 使用`git remote add origin git@192.168.0.200:fangler_src.git`来关联到git服务器对应的仓库，再次查看远程仓库，发现origin已和远程仓库fangler_src.git关联上。
+
 ![图片加载中...](/images/commit_to_git_server2.png)
 
 最后我们将代码push到远程，`git push origin master`，成功。
@@ -31,6 +33,7 @@ git服务器部署好了后，我们就可以创建远程仓库了。其他人�
 **2. 代码已经是git仓库，而且有远程仓库**
 
 如果是这种情况，发现我们执行"git remote add origin "的时候出现错误"fatal：remote origin already exists." ，这是因为origin 已经关联到其他远程仓库了。我们就不能继续使用origin了，需要换个名字，`git remote add origin2 git@192.168.0.200:fangler_src.git`。
+
 ![图片加载中...](/images/commit_to_git_server3.png)
 
 这样的话，我们就会使用origin2(也可以自己换成其他的)来提交代码，`git push origin2 master`，成功。
