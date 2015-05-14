@@ -1,6 +1,6 @@
 ---
 layout: post
-title: genymotion-Virtualization-engine-not-found
+title: genymotion "Virtualization engine not found" 错误的解决办法
 description: 打开Genymotion的时候出现了这个错误 "Virtualization engine not found, Plugin loading aborted." 
 keywords: Virtualization engine not found, Genymotion
 category: working
