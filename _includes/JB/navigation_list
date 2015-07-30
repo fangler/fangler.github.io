@@ -1,10 +1,11 @@
 {% comment %} 自定义主页面中的导航 {% endcomment %}
-{% assign pages_list = 'categories about' %}
+{% assign pages_list = 'categories contact about' %}
 {% assign current_page = page.url | remove: '/' | remove:'.html' %}
 {% assign pages_list = pages_list | replace: {{current_page}}, 'active' %}
 {% assign pages_list = pages_list | split:' ' %}
 
 <li class="{{pages_list[0]}}"><a href="/categories.html">分类</a></li>
-<li class="{{pages_list[1]}}"><a href="/about.html">关于</a></li>
+<li class="{{pages_list[1]}}"><a href="/contact.html">联系</a></li>
+<li class="{{pages_list[2]}}"><a href="/about.html">关于</a></li>
 {% assign pages_list = nil %}
 {% assign current_page = nil %}

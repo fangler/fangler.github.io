@@ -29,12 +29,13 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!--
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
@@ -57,7 +58,7 @@
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ HOME_PATH }}">
-                  <strong>{{ site.author.name }}</strong><small><em>*{{ site.title }}*</em></small>
+                  <img src="/images/favicon.ico" style="display:inline"/><strong>&nbsp&nbsp{{ site.author.name }}</strong>
                 </a>
             </div>
 
@@ -112,7 +113,6 @@
     <script src="{{ ASSET_PATH }}/js/classie.js"></script>
     <script src="{{ ASSET_PATH }}/js/cbpAnimatedHeader.js"></script>
     <script src="{{ ASSET_PATH }}/js/freelancer.js"></script>
-
 
   </body>
 </html>
