@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{{ page.title }}</title>
-	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+	  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -90,29 +90,24 @@
     </div>
 
     <footer class="text-center" id="footer">
-      <div class="footer-below">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-                      with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>.
-                    </p>
-                  </div>
-              </div>
-          </div>
+      <div class="footer-below container-fluid">
+        <div class="row">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+            with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>.
+          </p>
+        </div>
       </div>
     </footer>
 
     <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <!--
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     -->
     <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
     <script src="{{ ASSET_PATH }}/js/classie.js"></script>
     <script src="{{ ASSET_PATH }}/js/cbpAnimatedHeader.js"></script>
     <script src="{{ ASSET_PATH }}/js/freelancer.js"></script>
-
   </body>
 </html>

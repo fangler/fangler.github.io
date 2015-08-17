@@ -41,12 +41,12 @@ git服务器部署好了后，我们就可以创建远程仓库了。其他人�
 **还有一些其他的命令可能用的到**
 
 - 如果想修改远程仓库的本地名称，可以使用`git remote rename`，比如想把上面的origin2换成develop，可以这样做：
-{% highlight sh %}
+```c
 $git remote rename origin2 develop
 $git remote
 develop
 origin
-{% endhighlight%}
+```
 
 - 如果上面origin对应的远程仓库不可用(ip地址修改了情况)，我们可能想要移除对应的远程仓库，可以使用`git remote rm`命令。
 {% highlight sh %}
