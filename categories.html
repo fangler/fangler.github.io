@@ -4,14 +4,22 @@ title: 分类
 group: navigation
 ---
 {% include JB/setup %}
-<div>
-	{% for category in site.categories %}
-	<h3 class="line-box">{{ category[0] }}({{ category[1].size }}篇)</h3>
-	<ul class="posts-list">
-		{% assign pages_list = category[1] %}
-		{% include JB/pages_list %}
-	</ul>
 
-	{% endfor %}
+<div class="container">
+	<ul class="nav nav-tabs" id="categories-nav">
+		{% for category in site.categories %}
+		<li><a href="#{{ category[0]}}-ref" data-toggle="tab">{{ category[0] | join: "/" }}({{ category[1].size }}篇)</a></li>
+		{% endfor %}
+	</ul>
+	<div class="tab-content">
+		{% for category in site.categories %}
+		<div class="tab-pane" id="{{ category[0] }}-ref">
+			<ul class="posts-list">
+				{% assign pages_list = category[1] %}
+				{% include JB/pages_list %}
+			</ul>
+		</div>
+		{% endfor %}
 	</div>
+</div>
 
