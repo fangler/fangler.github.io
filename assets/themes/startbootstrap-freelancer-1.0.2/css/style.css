@@ -56,6 +56,10 @@ ul.posts-list li{
   margin-bottom: 0px;
 }
 
+#categories-content {
+  border-top: 1px solid #ddd;
+}
+
 #categories-nav {
   min-width: 140px;
 }

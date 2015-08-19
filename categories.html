@@ -9,7 +9,7 @@ group: navigation
 	<div class="tab-content col-md-9">
 		{% for category in site.categories %}
 		<div class="tab-pane" id="{{ category[0] }}-ref">
-			<ul class="posts-list list-unstyled">
+			<ul id = "categories-content" class="posts-list list-unstyled">
 				{% assign pages_list = category[1] %}
 				{% include JB/pages_list %}
 			</ul>
