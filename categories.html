@@ -6,13 +6,6 @@ group: navigation
 {% include JB/setup %}
 
 <div class="container">
-	<div class="col-md-3" id="categories-div">
-		<ul class="nav nav-tabs nav-stacked affix" id="categories-nav">
-			{% for category in (site.categories %}
-			<li><a href="#{{ category[0]}}-ref" data-toggle="tab">{{ category[0] | join: "/" }}({{ category[1].size }}篇)</a></li>
-			{% endfor %}
-		</ul>
-	</div>
 	<div class="tab-content col-md-9">
 		{% for category in site.categories %}
 		<div class="tab-pane" id="{{ category[0] }}-ref">
@@ -22,6 +15,13 @@ group: navigation
 			</ul>
 		</div>
 		{% endfor %}
+	</div>
+	<div class="col-md-3" id="categories-div">
+		<ul class="nav affix" id="categories-nav">
+			{% for category in (site.categories %}
+			<li><a href="#{{ category[0]}}-ref" data-toggle="tab">{{ category[0] | join: "/" }}({{ category[1].size }}篇)</a></li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>
 

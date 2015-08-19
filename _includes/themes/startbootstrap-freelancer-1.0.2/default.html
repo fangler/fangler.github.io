@@ -106,9 +106,9 @@
     <script src="{{ ASSET_PATH }}/js/freelancer.js"></script>
     <script src="{{ ASSET_PATH }}/js/custom.js"></script>
       $(function () {
-        $('#categories-navdiv').affix({
+        $('#categories-nav').affix({
            offset: {
-              top: 60 
+              top: $('.navbar-fixed-top').offset().top
            }
         });
      });

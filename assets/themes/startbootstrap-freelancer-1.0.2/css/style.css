@@ -55,3 +55,22 @@ ul.posts-list li{
   line-height: 30px;
   margin-bottom: 0px;
 }
+
+#categories-nav {
+  min-width: 140px;
+}
+
+#categories-nav li {
+  border: 1px solid #ddd;
+  border-bottom-width: 0px
+}
+
+#categories-nav li:first-child{
+  border-radius: 4px 4px 0 0;
+}
+
+#categories-nav li:last-child{
+  border-radius: 0 0 4px 4px;
+  border-bottom-width: 1px;
+}
+
