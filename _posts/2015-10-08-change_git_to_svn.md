@@ -79,6 +79,6 @@ git的提交分3步，`git add -A` ->  `git commit -m "message to commit"` -> `g
 
 参考：
 
-http://blog.chinaunix.net/uid-11639156-id-3077471.html
+[http://blog.chinaunix.net/uid-11639156-id-3077471.html](http://blog.chinaunix.net/uid-11639156-id-3077471.html)
 
-http://blog.csdn.net/zhangskd/article/details/43452627
+[http://blog.csdn.net/zhangskd/article/details/43452627](http://blog.csdn.net/zhangskd/article/details/43452627)
