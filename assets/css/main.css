@@ -173,6 +173,13 @@ html, body {
   #main_content {
     font-size: 14px; } }
 
+#main_content::-webkit-scrollbar {
+  width: 1px; }
+#main_content::-webkit-scrollbar-thumb {
+  background: transparent; }
+#main_content:hover::-webkit-scrollbar-thumb {
+  background: #c8ced6; }
+
 #pjax {
   padding: 0 5% 30px; }
 @media screen and (min-width: 1281px) {
