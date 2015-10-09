@@ -1,6 +1,7 @@
 # fangler的博客
 
-个人博客模板，当前完成度 80%, 访问[http://fangler.gitcafe.io/](http://fangler.gitcafe.io/)，
+个人博客模板，当前完成度 80%, 访问[网站效果](http://fangler.gitcafe.io/)查看效果
+[github  repo 地址](https://github.com/fangler/fangler.github.io)
 [gitcafe repo 地址](https://gitcafe.com/fangler/fangler)
 
 ## 本版本的一些说明
