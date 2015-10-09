@@ -6,7 +6,6 @@ keywords: 创业
 category: thinking
 tags: [创业]
 ---
-{% include JB/setup %}
 
 从四月份算来应该也快有五个月了，这五个月来的所谓创业，整体来说不算累，好像也还是老板一个人瞎忙活的状态。
 

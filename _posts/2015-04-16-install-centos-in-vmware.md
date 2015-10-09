@@ -6,7 +6,6 @@ keywords: VMware,Centos Everything,VMware tools
 category: working
 tags: [Centos]
 ---
-{% include JB/setup %}
 
 最近在虚拟机上安装Centos作为开发环境，期间出现了一些问题，于是整理成一篇文章记录下来。
 

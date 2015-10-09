@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Android开发Tips--用代码实现控件点击后的效果
+title: Tips--用代码实现控件点击后的效果
 description: Andorid使用代码实现控件点击后的效果,用StateListDrawable和LightingColorFilter来实现控件的点击背景效果
 keywords: android, StateListDrawable,LightingColorFilter,点击效果
 category: android
 tags: [StateListDrawable]
 ---
-{% include JB/setup %}
 
 *由于在项目中使用到，所以做个备忘来记录android开发中的tips。*
 

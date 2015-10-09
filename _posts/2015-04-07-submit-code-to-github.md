@@ -6,7 +6,6 @@ keywords: git, jekyll, github
 category: interest
 tags: [github]
 ---
-{% include JB/setup %}
 
 上周都是在用本地虚拟机搭建的jekyll环境来运行博客，在博客的简单框架已经完成后，想把代码提交到github上，这样的话就能使用github的博客了。
 

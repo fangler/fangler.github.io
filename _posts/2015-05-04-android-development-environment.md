@@ -1,12 +1,11 @@
 ---
 layout: post
-title: android开发环境之选择Android Studio
+title: android开发选择Android Studio
 description: android开发环境选择，使用Eclipse、Intelij IDEA和Android Studio 等的比较和评价
 keywords: android, Eclipse, Intelij IDEA,Android Studio
 category: android
 tags: [android]
 ---
-{% include JB/setup %}
 
 记录一下现在的android开发环境：
 

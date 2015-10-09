@@ -6,7 +6,6 @@ keywords: Android模拟器，Visual Studio 2015
 category: android
 tags: [Android模拟器]
 ---
-{% include JB/setup %}
 
 上次看到新闻说是微软发布的Visual Studio 2015是怎么怎么强大的一个开发工具，包含了很多的功能。当然Visual Studio一直很强大，作为c/c++的开发工具来说，但做android开发以来，一直都是用intelij IDEA/Android Studio等开发工具。
 

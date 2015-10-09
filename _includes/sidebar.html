@@ -1,0 +1,56 @@
+<aside id="sidebar">
+  <div id="sidebar-left">
+    <a id="sidebar-avatar" href="{{ "/" | prepend: site.baseurl }}">
+      <img class="am-circle am-img-thumbnail am-animation-slide-top" alt="{{ site.tittle }}" src="{{ "/assets/img/avatar.png" | prepend: site.baseurl }}" width="100" height="100"/>
+    </a>
+
+    <div>
+      <!--<a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="sidebar-social-icon feed"></a>-->
+      <a href="mailto:{{ site.author.email }}" class="am-icon-medium" data-am-popover="{theme: 'primary', content: 'mail me', trigger: 'hover focus'}"></a>
+      <a href="http://fangler.sinaapp.com/" class="am-icon-file-photo-o" data-am-popover="{theme: 'primary', content: 'another site', trigger: 'hover focus'}"></a>
+      <a href="/about.html" class="am-icon-user" data-am-popover="{theme: 'primary', content: 'about me', trigger: 'hover focus'}"></a>
+    </div>
+
+    <ul id="sidebar-tags" class="am-list am-list-border">
+      <li class="active" data-filter="all"><a href="javascript:void(0)">全部文章</a></li>
+      {% if site.filter == 'category' %}
+        {% for category in site.categories %}
+          <li data-filter="{{ category | first }}"><a href="javascript:void(0)">{{ category | first }}</a></li>
+        {% endfor %}
+      {% elsif site.filter == 'tag' %}
+        {% for tag in site.tags %}
+          <li data-filter="{{ tag | first }}"><a href="javascript:void(0)">{{ tag | first }}</a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+	<div id="am-panel am-panel-default">
+	  <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+	</div>
+  </div>
+
+  <div id="sidebar-right">
+    <div>
+      <input id="search-input" type="text" placeholder="站内查找...(目前不可用)" disabled/>
+    </div>
+
+    <ul id="article_list" class="am-nav">
+      {% if site.filter == 'category' %}
+      {% for post in site.posts %}
+      <li>
+      <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+        <span class="toc-link-circle"></span><span class="toc-link-title">{{ post.title }}</span><span class="toc-link-date">{{ post.date | date: " %Y %m"}}</span>
+      </a>
+      </li>
+      {% endfor %}
+      {% elsif site.filter == 'tag' %}
+      {% for post in site.posts %}
+      <li class="toc-link">
+      <a data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+      </li>
+      {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</aside>

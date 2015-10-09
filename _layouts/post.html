@@ -1,7 +1,49 @@
 ---
-theme :
-  name : startbootstrap-freelancer-1.0.2
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/startbootstrap-freelancer-1.0.2/post.html %}
+<div id="pjax">
+  <article id= "post-content" class="am-article">
+    <div class="am-article-hd">
+      <h1 id="post-title" class="am-article-title">{{ page.title }}</h1>
+      <div class="am-article-meta" style="margin-top: 4px">
+        <span class="am-icon-user"/>
+        <span>{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</span>
+        <span class="am-icon-at" style="margin-left: 8px"/>
+        <span>{{ page.date | date: " %Y 年 %m 月 %d 日" }}</span>
+        <span class="am-icon-folder" style="margin-left: 8px"/>
+        <span style="color: #0084c7">{{ page.category }}</span>
+      </div>
+    </div>
+
+    <hr/>
+    {{ content }}
+  </article>
+
+  <!-- tabs for content -->
+  {% if  page.show_content_nav ==  'true' %}
+    <div id="post-content-tabs">
+      <span>Table of Contents</span>
+      <ul></ul>
+    </div>
+  {% endif %}
+
+  <hr>
+  <ul class="am-pagination">
+    {% if page.previous %}
+    <li class="prev am-animation-slide-left"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; 上一篇</a></li>
+    {% else %}
+    <li class="prev disabled"><a>&larr; 没有了</a></li>
+    {% endif %}
+    <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">{{ page.title }}</a></li>
+    {% if page.next %}
+    <li class="next am-animation-slide-right"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &raquo;</a></li>
+    {% else %}
+    <li class="next disabled"><a>没有了 &rarr;</a>
+      {% endif %}
+  </ul>
+  <hr>
+  {% case site.comments %}
+    {% when "duoshuo" %}
+      {% include duoshuo %}
+  {% endcase %}
+</div>

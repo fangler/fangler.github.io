@@ -7,7 +7,6 @@ keywords: 感悟
 category: thinking
 tags: [感悟]
 ---
-{% include JB/setup %}
 
 上班的时候总是感觉没有一天休息的时间，于是总会想着能有一整天的休息时间该多好，等到了下班时间后就会想着赶紧回家里待着。
 

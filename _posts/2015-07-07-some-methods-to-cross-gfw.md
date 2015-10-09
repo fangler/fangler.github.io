@@ -6,7 +6,6 @@ keywords: 科学上网，翻墙，vpn
 category: interest
 tags: [翻墙]
 ---
-{% include JB/setup %}
 
 做android开发发现不fq很多事情都不好弄，比如用Android Studio的同学会发现很多时间下载一些依赖库的时候需要fq，
 

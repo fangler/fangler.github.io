@@ -6,7 +6,6 @@ keywords: Android Studio, 快捷方式
 category: android
 tags: [android studio]
 ---
-{% include JB/setup %}
 
 Android Studio 有很多快捷键，对android开发来讲，学会使用这些快捷键是能提高效率的。有个国外的博客写了一些快捷键的用法，有图有真相。
 

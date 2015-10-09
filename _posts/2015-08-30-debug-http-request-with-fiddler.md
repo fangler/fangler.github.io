@@ -6,7 +6,6 @@ keywords: fiddler, http
 category: android
 tags: [git]
 ---
-{% include JB/setup %}
 
 ###Fiddler调试http的利器
 

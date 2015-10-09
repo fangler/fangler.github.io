@@ -1,6 +1,18 @@
 ---
-theme :
-  name : startbootstrap-freelancer-1.0.2
+layout: compress
 ---
-{% include JB/setup %}
-{% include themes/startbootstrap-freelancer-1.0.2/default.html %}
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include sidebar.html %}
+
+    <div id="main_content">
+      {{ content }}
+    </div>
+    <button id="menu_fullscreen">
+      <span id="menu_fullscreen_btn" class="am-icon-arrow-left"></span>
+    </button>
+    {% include scripts.html %}
+  </body>
+</html>

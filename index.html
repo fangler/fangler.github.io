@@ -1,18 +1,15 @@
 ---
-layout: page
-title: fangler博客
-keywords: fangler, fangler.github.io, ifangler, android开发, 爱折腾, 爱学习
-description: fangler, fangler.github.io, android开发, C++开发, Python、web学习折腾中 
+layout: default
 ---
-{% include JB/setup %}
-
-<div class="container">
-	<h3>最新文章</h3>
-	<ul class="posts-list">
-	{% for post in site.posts %}
-		<li>{{ post.date | date: " %Y 年 %m 月 %d 日" }} <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-	</ul>
+<div style="margin: 30px;padding-top: 1.1em" class="am-panel am-article">
+  <div class="am-panel-bd">
+    <div class="am-article-hd">
+      <h1 am-article-title>最新文章</h1>
+    </div>
+    <ul class="posts-list">
+      {% for post in site.posts %}
+      <li>{{ post.date | date: " %Y 年 %m 月 %d 日" }} <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
-
-

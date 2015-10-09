@@ -7,7 +7,6 @@ keywords: jekyll-bootstrap,startbootstrap-freelancer,更换博客主题
 category: interest
 tags: [Freelancer]
 ---
-{% include JB/setup %}
 
 博客最开始使用的是jekyll-bootstrap默认的主题，今天在网上无意间看到了[startbootstrap-freelancer](http://ironsummitmedia.github.io/startbootstrap-freelancer/ "startbootstrap-freelancer"){:target="_blank"}，这个效果感觉还不错，反正是用bootstrap写的，博客是可以拿过来用的。
 

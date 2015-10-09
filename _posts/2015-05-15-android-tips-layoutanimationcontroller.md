@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Android开发Tips--给ListView&GridView等布局控件做个动画吧
+title: Tips--给ListView等布局控件做个动画吧
 description: LayoutAnimationController用于为一个layout里面的控件，或者是一个ViewGroup里面的控件设置动画效果（即整个布局）
 keywords: android, LayoutAnimationController
 category: android
 tags: [LayoutAnimationController]
 ---
-{% include JB/setup %}
 
 ﻿有个需求是要给GridView做个这样的动画，GridView第一次呈现的时候，里面的每个图标(GridView的元素就是个图标加文字的组合)要有个由小变大的效果，而不是突然的出现
 

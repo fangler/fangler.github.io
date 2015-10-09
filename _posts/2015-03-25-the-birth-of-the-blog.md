@@ -7,7 +7,6 @@ keywords: jekyll, bootstrap, jekyllbootstrap
 category: interest
 tags: [搭建博客]
 ---
-{% include JB/setup %}
 
 一直想用github来搭建一个博客来学习下的。正好现在在家有时间，于是来折腾下。简单的框架已经完成，后续还会继续完善。整个搭建的过程记录一下。
 

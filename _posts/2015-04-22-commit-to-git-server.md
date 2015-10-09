@@ -6,7 +6,6 @@ keywords: git, git服务器
 category: working
 tags: [git]
 ---
-{% include JB/setup %}
 
 git服务器部署好了后，我们就可以创建远程仓库了。其他人便可以从远程仓库中拉取或推送数据了，来协作开发项目，分享各自的工作进展。
 

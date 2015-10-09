@@ -6,7 +6,6 @@ keywords: Centos, git, git服务器
 category: working
 tags: [git]
 ---
-{% include JB/setup %}
 
 这两天都在搭建自己工作中用到的开发环境，服务器已经确定使用Centos，团队打算使用git作为版本控制工具。  
 正好我对git还算比较熟悉，于是让我来为Centos服务器搭建git环境。  

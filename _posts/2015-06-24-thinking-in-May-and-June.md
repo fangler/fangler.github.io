@@ -6,7 +6,6 @@ keywords: May, June, think
 category: thinking
 tags: [thinking]
 ---
-{% include JB/setup %}
 
 ﻿这是在深圳待过的第一个五月和六月，这个五月和六月有很多刺激。这个时间应该是深圳最热的时候，晚上经常会热醒来。也是深圳雨水最多的时间，下一个星期的雨，连衣服都晾不干。
 

@@ -6,7 +6,6 @@ keywords: git, git cherry-pick, git stash
 category: working
 tags: [git]
 ---
-{% include JB/setup %}
 
 ###原来还有这么好用的git命令
 
