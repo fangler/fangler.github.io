@@ -38,16 +38,16 @@
     <ul id="article_list" class="am-nav">
       {% if site.filter == 'category' %}
       {% for post in site.posts %}
-      <li class="ripple">
-      <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+      <li>
+      <a class="toc-link ripple" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
         <span class="toc-link-circle"></span><span class="toc-link-title">{{ post.title }}</span><span class="toc-link-date">{{ post.date | date: " %Y %m"}}</span>
       </a>
       </li>
       {% endfor %}
       {% elsif site.filter == 'tag' %}
       {% for post in site.posts %}
-      <li class="ripple">
-      <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+      <li>
+      <a class="toc-link ripple" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
         {{ post.title }}
       </a>
       </li>
