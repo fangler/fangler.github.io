@@ -12,14 +12,14 @@
     </div>
 
     <ul id="sidebar-tags" class="am-list am-list-border">
-      <li class="active" data-filter="all"><a href="javascript:void(0)">全部文章</a></li>
+      <li class="active ripple" data-filter="all"><a href="javascript:void(0)">全部文章</a></li>
       {% if site.filter == 'category' %}
         {% for category in site.categories %}
-          <li data-filter="{{ category | first }}"><a href="javascript:void(0)">{{ category | first }}</a></li>
+          <li class="ripple" data-filter="{{ category | first }}"><a href="javascript:void(0)">{{ category | first }}</a></li>
         {% endfor %}
       {% elsif site.filter == 'tag' %}
         {% for tag in site.tags %}
-          <li data-filter="{{ tag | first }}"><a href="javascript:void(0)">{{ tag | first }}</a></li>
+          <li class="ripple" data-filter="{{ tag | first }}"><a href="javascript:void(0)">{{ tag | first }}</a></li>
         {% endfor %}
       {% endif %}
     </ul>
@@ -38,7 +38,7 @@
     <ul id="article_list" class="am-nav">
       {% if site.filter == 'category' %}
       {% for post in site.posts %}
-      <li>
+      <li class="ripple">
       <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
         <span class="toc-link-circle"></span><span class="toc-link-title">{{ post.title }}</span><span class="toc-link-date">{{ post.date | date: " %Y %m"}}</span>
       </a>
@@ -46,8 +46,8 @@
       {% endfor %}
       {% elsif site.filter == 'tag' %}
       {% for post in site.posts %}
-      <li class="toc-link">
-      <a data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+      <li class="ripple">
+      <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
         {{ post.title }}
       </a>
       </li>
