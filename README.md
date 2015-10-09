@@ -1,14 +1,14 @@
 # fangler的博客
 
-个人博客模板，当前完成度 80%, 访问[网站效果](http://fangler.gitcafe.io/)查看效果
-[github  repo 地址](https://github.com/fangler/fangler.github.io)
+个人博客模板，当前完成度 80%, 访问[网站效果](http://fangler.gitcafe.io/)查看效果  
+[github  repo 地址](https://github.com/fangler/fangler.github.io)  
 [gitcafe repo 地址](https://gitcafe.com/fangler/fangler)
 
-## 本版本的一些说明
-本站原始模板来至[https://github.com/P233/P233.github.io](https://github.com/P233/P233.github.io)
+## 本版本的一些说明  
+本站原始模板来至[https://github.com/P233/P233.github.io](https://github.com/P233/P233.github.io)  
 感谢~~
 
-站点采用了[amazeui 妹子](http://amazeui.org/)的样式，字体，icon等。
+站点采用了[amazeui 妹子](http://amazeui.org/)的样式，字体，icon等。  
 代码高亮采用了`pygmentize`的风格。
 
 ## TODO 待完成
@@ -21,10 +21,10 @@
 
 ### 设置 `_config.yml`
 
--. `_config.yml` 除基本的站点设置外，新加入了社交链接与评论设置。将需要添加的社交帐号填入对应设置，并取消注释，会在头像下方增加一条社交帐号的链接。支持 Twitter, Weibo, Github, Codepen 以及 Dribbble。
--. `comments`目前只有`duoshuo`，鉴于国内使用多说的比较多。。 
--. `filter` 选项选择使用 `tag` 或 `category` 作为文章分类。
--. 每篇文章的头部可以添加如下的信息
+- `_config.yml` 除基本的站点设置外，新加入了社交链接与评论设置。将需要添加的社交帐号填入对应设置，并取消注释，会在头像下方增加一条社交帐号的链接。支持 Twitter, Weibo, Github, Codepen 以及 Dribbble。
+- `comments`目前只有`duoshuo`，鉴于国内使用多说的比较多。。
+- `filter` 选项选择使用 `tag` 或 `category` 作为文章分类。
+- 每篇文章的头部可以添加如下的信息
     ---
     layout: post
     author: fangler
