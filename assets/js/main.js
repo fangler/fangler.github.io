@@ -4,7 +4,7 @@
    @author Peiwen Lu (P233)
    https://github.com/P233/3-Ghost
 
-   @modified by fangler 2014-09-13
+   @modified by fangler 2015-09-13
 \*---------------------------------*/
 
 // Detect window size, if less than 1280px add class 'mobile' to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
@@ -18,6 +18,19 @@ var toc_link   = $('.toc-link'),
     container  = $('#main_content'),
     content    = $('#pjax'),
     button     = $('#menu_fullscreen_btn');
+
+var isFullScreen = true;
+
+//初始化为全屏
+if (!button.hasClass('fullscreen')) {
+  button.addClass('fullscreen');
+}
+if (!sidebar.hasClass('fullscreen')) {
+  sidebar.addClass('fullscreen');
+}
+if (!content.hasClass('fullscreen')) {
+  content.addClass('fullscreen');
+}
 
 // Tags Filter
 $('#sidebar-tags').on('click', 'li', function() {
@@ -34,7 +47,7 @@ $('#sidebar-tags').on('click', 'li', function() {
 // If sidebar has class 'mobile', hide it after clicking.
 toc_link.on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
-  if (sidebar.hasClass('mobile') || !button.hasClass('fullscreen')) {
+  if (sidebar.hasClass('mobile')) {
     goto_fullscreen();
   }
 });
@@ -52,32 +65,19 @@ $('#menu_fullscreen').on('click', function() {
 $(document).pjax('#avatar, .toc-link', '#pjax', { fragment: '#pjax', timeout: 10000 });
 $(document).on({
   'pjax:click': function() {
-    content.fadeOut(200);
+    content.removeClass('fadeIn').addClass('fadeOut');
     $.AMUI.progress.start();
   },
   'pjax:start': function() {
   },
   'pjax:end': function() {
     $.AMUI.progress.done();
-    container.scrollTop(0);
-    content.fadeIn(300);
+    container.animate({scrollTop: 0}, 500);
+    content.css({'opacity':1}).removeClass('fadeOut').addClass('fadeIn');
 
     afterPjax();
   }
 });
-
-
-//初始化为全屏
- if (!button.hasClass('fullscreen')) {
-   button.addClass('fullscreen');
- }
- if (!sidebar.hasClass('fullscreen')) {
-   sidebar.addClass('fullscreen');
- }
- if (!content.hasClass('fullscreen')) {
-   content.addClass('fullscreen');
- }
-
 
 // Re-run scripts for post content after pjax
 function afterPjax() {
@@ -120,14 +120,17 @@ function afterPjax() {
     });
 
   pjax_loadDuodsuo();
-  goto_fullscreen();
+  if(!isFullScreen){
+    goto_fullscreen();
+  }
 
 }afterPjax();
 
 function goto_fullscreen(){
+  isFullScreen = true;
   sidebar.addClass('fullscreen');
   button.addClass('fullscreen');
-  content.delay(100).queue(function(){
+  content.delay(200).queue(function(){
     $(this).addClass('fullscreen').dequeue();
   });
   //小屏时不进行显示右侧章节列表
@@ -138,9 +141,10 @@ function goto_fullscreen(){
 }
 
 function goto_normal(){
+  isFullScreen = false;
   sidebar.removeClass('fullscreen');
   button.removeClass('fullscreen');
-  content.delay(100).queue(function(){
+  content.delay(300).queue(function(){
     $(this).removeClass('fullscreen').dequeue();
   });
   $("#post-content-tabs").removeClass("trigger_hover");
