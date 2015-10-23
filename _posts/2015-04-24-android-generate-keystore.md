@@ -7,13 +7,13 @@ category: android
 tags: [android keystore]
 ---
 
-####生成keystore####
+#### 生成keystore
 
 android编译生成的apk是要签名才能发布的，也就是说签名后才能装到其他手机上。*(调试情况下是用了默认的签名所以才能在手机或模拟器上安装)*
 
 既然要签名，就需要生成一个keystore文件，有两种方式
 
-#####命令行方式#####
+##### 命令行方式
 
 使用java中的keytool.exe工具，在java的安装目录下可以找到。*(比如：我的是 C:\Program Files\Java\jdk1.7.0_05\bin)*
 
@@ -39,7 +39,7 @@ android编译生成的apk是要签名才能发布的，也就是说签名后才�
 
 上面的内容根据需要修改..这样就话就会在"C:\Users\fangler"目录下生成 fangler.keystore文件。
 
-#####使用IDE#####
+##### 使用IDE
 
 如果是用Intellij IDEA或着Android Studio 的话，也是差不多的方法。
 
@@ -48,7 +48,7 @@ android编译生成的apk是要签名才能发布的，也就是说签名后才�
 
 图片中要填的东西和上图是一样的。
 
-####apk签名####
+#### apk签名
 
 生成keystore后就可以给编译好的apk签名了，还是喜欢用命令行的方式
 
