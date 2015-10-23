@@ -9,7 +9,7 @@ tags: [github]
 
 上周都是在用本地虚拟机搭建的jekyll环境来运行博客，在博客的简单框架已经完成后，想把代码提交到github上，这样的话就能使用github的博客了。
 
-####创建gitHub代码仓库
+#### 创建gitHub代码仓库
 注册github账号，注意username项：后面会用到
 
 创建一个repository，名字为 *username*.github.io，此处*username*为注册github账号时的username
@@ -40,7 +40,7 @@ tags: [github]
 
 由于本地的代码还没有创建成git代码仓库，所以使用第一次方式来提交代码。
 
-####提交本地代码到github
+#### 提交本地代码到github
 在本地代码目录执行`git init`。
 
 由于不需要README.md文件，就不需要执行这一步，而是换成`git add -A`，添加所有代码。

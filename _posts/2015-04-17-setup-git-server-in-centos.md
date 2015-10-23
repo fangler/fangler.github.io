@@ -11,11 +11,11 @@ tags: [git]
 正好我对git还算比较熟悉，于是让我来为Centos服务器搭建git环境。  
 Git服务器端的部署(Centos 7.0 -64位机器一台, Centos_IP : 192.168.1.111)
 
-####1. Git的安装####
+#### 1. Git的安装
 **Linux**：可以在命令行输入`git`看看有没有安装，如果用Debian或Ubuntu linux，通过`sudo apt-get install git`来安装(如是老一点的Debian或Ubuntu，命令改成`sudo apt-get install git-core`)。  
 **Windows**：msysgit是Windows版的Git，从[msysgit官网](http://msysgit.github.io/){:target="_blank"}下载，然后按默认选项安装即可。
 
-####2. 安装openssh server，本机已装，跳过
+#### 2. 安装openssh server，本机已装，跳过
 
 主要是ssh的配置，ssh开启公钥认证登录，编辑 etc/ssh/sshd_config(约在47到51行)，去掉以下几行的注释:
 {% highlight ruby %}
@@ -28,7 +28,7 @@ AuthorizedKeysCommandRunAs nobody
 
 然后重启ssh ， `sudo service sshd restart`。
 
-####3. 公钥和私钥配置####
+#### 3. 公钥和私钥配置
 上一步我们开启了ssh的公钥认证，这样我们就可以把私钥上传到服务器，这样就可以用ssh的公钥登录了。
 
 - 生成公钥和私钥
@@ -63,7 +63,7 @@ AuthorizedKeysCommandRunAs nobody
 
 很显然把所有用户的公钥都保存在authorized_keys文件中的做法并不总是合适的。特别是当协作开发的用户数量越来越多时，管理起来就十分的痛苦了。而且这种方法来说所有的用户都有完整的读写权限，这也是十分不利的。
 
-####4. 我们可以使用Gitosis来管理 authorized_keys文件和实现简单权限管理####
+#### 4. 我们可以使用Gitosis来管理 authorized_keys文件和实现简单权限管理
 
 - 安装 Python 的 setuptools 包，`sudo yum install python-setuptools`
 

@@ -7,19 +7,19 @@ category: working
 tags: [git]
 ---
 
-####最近要把git项目切换到svn上去(没办法总有些领导就喜欢这种过时的技术，不愿使用新的技术...)，整理一下其中的一些坑
+#### 最近要把git项目切换到svn上去(没办法总有些领导就喜欢这种过时的技术，不愿使用新的技术...)，整理一下其中的一些坑
 
-####本地的git项目上传到svn，需要使用到git中的svn命令(网上的说法是`git-svn`应该是旧的命令，我这边是git svn，可以见[官网](http://git-scm.com/docs/git-svn))
+#### 本地的git项目上传到svn，需要使用到git中的svn命令(网上的说法是`git-svn`应该是旧的命令，我这边是git svn，可以见[官网](http://git-scm.com/docs/git-svn))
 
 过程如下：
 
-#####1. 在svn服务器新建了一个项目，假设为`someProc`
+##### 1. 在svn服务器新建了一个项目，假设为`someProc`
 
 注意：someProc是个空项目，即不包含`branches`,`tags`,`trunk`等目录，这不是个*标准*的svn项目
 
 如果someProc是个标准的svn项目，会包含`branches`,`tags`,`trunk`等目录
 
-#####2. 进入git项目目录内：
+##### 2. 进入git项目目录内：
 如果someProc是个空项目：`git svn init <svn url>/someProc`，初始化
 
 如果someProc是个标准svn项目：`git svn init -s <svn url>/someProc`，"-s"(= "--stdlayout")表示用标准方式初始化
@@ -31,7 +31,7 @@ url = <svn url>/someProc
 fetch = :refs/remotes/git-svn
 `
 
-#####3. 获取svn 项目的更新
+##### 3. 获取svn 项目的更新
 `git svn fetch`  会出现如下的一行 ：
 
 r2 = 70db8c3a75f4001675dc88c01830dafe21dc69d6 (refs/remotes/git-svn)
@@ -39,7 +39,7 @@ r2 = 70db8c3a75f4001675dc88c01830dafe21dc69d6 (refs/remotes/git-svn)
 
 这意味着获取到svn项目的更新了，如果出现空行，表示出错了。。
 
-#####4. 提交本地git项目的所有更新到svn
+##### 4. 提交本地git项目的所有更新到svn
 
 `git svn dcommit`
 
@@ -83,7 +83,7 @@ Perhaps the repository is empty. at C:\Program Files\Git\mingw64/libexec/git-cor
 
 
 
-####本地git提交同步到svn
+#### 本地git提交同步到svn
 
 git的提交分3步，`git add -A` ->  `git commit -m "message to commit"` -> `git push`
 

@@ -12,7 +12,7 @@ tags: [搭建博客]
 
 环境使用的是ubuntu 14.04， 使用的是[jekyllbootstrap](http://jekyllbootstrap.com/ "jekyllbootstrap"){:target="_blank"}主题。
 
-####1. 环境准备####
+#### 1. 环境准备
 
 **安装开发环境** ， 由于ubuntu没有安装开发环境，所以需要先安装 `sudo apt-get install build-essential` .
 
@@ -28,7 +28,7 @@ fangler@fangler-VirtualBox:~$ gem -v
 
 **安装jekyll** ，`gem install jekyll`，安装的版本是 jekyll 0.11.2 ，如果是高版本的话命令可能后面有些地方会不一样。
 
-####2. 搭建jekyllbootstrap主题####
+#### 2. 搭建jekyllbootstrap主题
 **下载jekyll-bootstrap** ，`git clone https://github.com/plusjade/jekyll-bootstrap.git fangler.github.com`
 
 下载完成后就可以看到jekyllbootstrap的效果 ，在 fangler.github.com 目录下执行`jekyll --server `(如果是jekyll高版本，命令
@@ -72,7 +72,7 @@ PS: 你可以这么查看pygments里面的样式
 
 这样基本的blog框架已经搭好了，默认的jekyll-bootstrap也不怎么好看。后续可以自己写一些模板页面来美化 = =
 
-####3. 遇到的问题####
+#### 3. 遇到的问题
 
 * 安装开发环境出现的问题
 
