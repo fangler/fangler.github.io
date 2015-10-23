@@ -9,6 +9,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://fangler.github.io" # the base hostname & protocol for your site
 
+kramdown:
+  input: GFM
+
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
 # Most places will/should use BASE_PATH to make the urls
@@ -42,5 +45,5 @@ comments : duoshuo
 
 # Build settings
 #
-#host : 192.168.170.128
+#host : 192.168.17.128
 
