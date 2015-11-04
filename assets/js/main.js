@@ -168,3 +168,23 @@ function pjax_loadDuodsuo(){
     $(dus).html(el);
   }
 }
+
+function log_extra(){
+  if (window["console"]){
+    console.log('Ready? game start...');
+    console.time('Total')
+    console.log('%c欢迎你陌生人, 我叫 枫寒 ', 'color: #fff; background: #00acc1;');
+    console.groupCollapsed()
+    console.log('%cI am a boy.', 'color: #fff; background: #00acc1;')
+    console.log('%c我的微信号是 fanglerZ.', 'color: #fff; background: #00acc1;')
+    console.log('%c来到这里也是缘分，不如交个朋友吧', 'color: #fff; background: #00acc1;')
+    console.log('还请备注' + '%c来至：console', 'color: #f00;')
+    console.groupEnd();
+    console.log('     ↑     ');
+    console.log('   ↑↑↑↑↑    ');
+    console.log('↑↑↑↑↑↑↑↑↑↑↑');
+    console.timeEnd('Total');
+  }
+}
+
+log_extra();
