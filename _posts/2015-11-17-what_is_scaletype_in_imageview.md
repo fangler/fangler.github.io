@@ -3,8 +3,8 @@ layout: post
 title: ImageView的ScaleType详解
 description: ImageView的Scaletype决定了图片在View上显示时的样子，如进行何种比例的缩放，及显示图片的整体还是部分
 keywords: ImageView, Scaletype
-category: ImageView
-tags: [android]
+category: android
+tags: [ImageView]
 ---
 
     一直对ImageView的ScaleType的几个选项有点陌生，网上的资料也没能让我清楚的知道在什么场景应该选择ScaleType的哪个选项，于是自己用例子来实验了一把。
