@@ -43,7 +43,7 @@ python get-pip.py
    `mysql -u root -p` -> `create database shadowsocks;` ->`use shadowsocks`
 3. 导入表，clone上面的代码后，我们进入`cd shadowsocks/shadowsocks/`可以看到一个shadowsocks.sql的文件，在mysql中使用`source shadowsocks.sql`导入该表。
 4. 开启服务`python server.py`
-如果看到db start server at port [9999] pass [wsdsghh]
+如果看到db start server at port [50000] pass [0000000]
 start server at 50000
 那么恭喜，你成功了。
 
