@@ -16,13 +16,13 @@ tags: [android]
 
 #### 1. 使用HideReturnsTransformationMethod 和  PasswordTransformationMethod
 {% highlight java %}
-((CheckBox) findViewById(R.id.check2)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+((CheckBox) findViewById(R.id.check)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked){
-            editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            editText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
         }else {
-            editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            editText.setTransformationMethod(PasswordTransformationMethod.getInstance());
         }
     }
 });
