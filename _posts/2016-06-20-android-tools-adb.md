@@ -21,7 +21,7 @@ tags: [Android]
 
 -> adb shell package相关
   
-     adb shell pm list packages：列出所有的包名。
+     adb shell pm list packages：列出所有的包名  
      
      adb shell dumpsys package：列出所有的安装应用的信息  
      
