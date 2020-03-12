@@ -47,3 +47,5 @@ comments : duoshuo
 #
 host : 192.168.17.128
 
+
+theme: jekyll-theme-cayman
